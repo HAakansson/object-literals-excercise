@@ -1,4 +1,4 @@
-// ---------- store-object ----------
+// ---------- store object ----------
 let ica = {
   name: "Ica Supermarket Skurup",
   address: "Drottninggatan 29",
@@ -17,9 +17,13 @@ let ica = {
     this.staff = this.staff.filter((p) => p !== person);
     return this;
   },
+  addProduct: function (product) {
+    this.products.push(product)
+    return this;
+  }
 };
 
-// ---------- person-objects ----------
+// ---------- person objects ----------
 let niklas = {
   firstName: "Niklas",
   lastName: "Håkansson",
@@ -57,4 +61,25 @@ let sofia = {
     store.staff.push(this);
     return this;
   },
+};
+
+// ---------- product objects ----------
+let milk = {
+  name: "Mellanmjök",
+  price: 11,
+}
+
+let cheese = {
+  name: "Herrgårdsost",
+  price: 59,
+};
+
+let beef = {
+  name: "Biff",
+  price: 109,
+};
+
+let fish = {
+  name: "Lax",
+  price: 89,
 };
